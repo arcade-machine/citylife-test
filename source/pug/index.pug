@@ -1,0 +1,112 @@
+doctype html
+
+html(lang = "en")
+    head
+        meta(charset = "utf-8")
+        meta(name = "viewport", content = "width=device-width,initial-scale=1")
+        meta(name = "description", content = "Тестовое задание, CITYLIFE")
+
+        title Тестовое задание, CITYLIFE
+
+        link(type = "text/css", rel = "stylesheet", href = "css/normalize.css")
+        link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
+
+    body
+        header(class = "page-header")
+            div(class = "page-header__wrapper")
+                ul(class = "page-header__slider slider-header")
+                    li(class = "slider-header__item slider-header__item--current slider-header__item--cuba")
+                        fieldset(class = "slider-header__content")
+                            legend(class = "slider-header__legend") Explore the world of Casas & Cadillacs
+                            h2(class = "slider-header__header") Cuba
+                    li(class = "slider-header__item slider-header__item--burgundy")
+                        fieldset(class = "slider-header__content")
+                            legend(class = "slider-header__legend") Explore the luxury of Wine & Food
+                            h2(class = "slider-header__header") Burgundy
+                    li(class = "slider-header__item slider-header__item--antarctica")
+                        fieldset(class = "slider-header__content")
+                            legend(class = "slider-header__legend") Snow, ice, water, rock. Simply stunning.
+                            h2(class = "slider-header__header") Antarctica
+                ul(class = "main-header__dots slider-dots")
+                    li(class = "slider-dots__item slider-dots__item--current")
+                    li(class = "slider-dots__item")
+                    li(class = "slider-dots__item")
+            nav(class = "page-header__navigation navigation")
+                ul(class = "navigation__list")
+                    li(class = "navigation__item navigation__item--current")
+                        a(class = "navigation__link", href = "#") Summary
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") General
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") Sights
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") Weather
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") What to Do
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") Residential Guide
+                    li(class = "navigation__item")
+                        a(class = "navigation__link", href = "#") Photos
+        main(class = "main-content")
+            section(class = "main-content__description description")
+                h2(class = "description__heading") Why you’ll love vacation in Cuba
+                p(class = "description__info") It always had the allure a forbidden fruit. I love it for its uniqueness, creativity and survivalist spirit. I love it because, despite 60 years of setbacks, it remains an upbeat and open place. Walk down the street with a Cuban friend and, within one block, you’ll have received five handshakes, four kisses, three greetings of ‘dime hermano!’ and at least two invites into someone’s house. #[a(class = "description__more", href = "#") Read More ››]
+                ul(class = "description__statistic statistic")
+                    li(class = "statistic__item")
+                        img(class = "statistic__icon")
+                        p(class = "statistic__stat") 1,920
+                        p(class = "statistic__about") Trips
+                    li(class = "statistic__item")
+                        img(class = "statistic__icon")
+                        p(class = "statistic__stat") 271
+                        p(class = "statistic__about") Venues
+                    li(class = "statistic__item")
+                        img(class = "statistic__icon")
+                        p(class = "statistic__stat") 3,321
+                        p(class = "statistic__about") Tickets Sold
+                    li(class = "statistic__item")
+                        img(class = "statistic__icon")
+                        p(class = "statistic__stat") 2,912
+                        p(class = "statistic__about") Reviews
+            section(class = "main-content__about about")
+                h2(class = "about__heading") What Cuba is about
+                p(class = "about__info") Cuba is like a prince in a poor man’s coat; behind the sometimes shabby facades, gold dust lingers. It’s these rich dichotomies that make travel here the exciting. Trapped in a time warp and reeling from an economic embargo that has grated for more than half a century, this is a country where you can wave goodbye to everyday assumptions and expect the unexpected.
+                div(class = "about__beaches")
+                    section(class = "about__card card")
+                        h3(class = "card__heading") Astonishing Beaches
+                        p(class = "card__info") Whether you’re staying in a luxury hotel in Havana or exploring the rural charms of Vinales, in some ways it’s all the real Cuba. Some travellers might opt to miss the beach resort town of Varadero, but this energetic beachside paradise should still  be an option to consider as part of your Cuban travel plans.
+            section(class = "main-content__cadillacs cadillacs")
+                h2(class = "cadillacs__heading") The Cadillacs of Cuba
+                img(class = "cadillacs__photo")
+                p(class = "cadillacs__content") The American trade embargo with Cuba in 1960 had the effect of instantly separating thousands of 1940s and 1950s Detroit-built cars from their spare parts supply. Convertibles were always popular, thanks to year-round tropical weather. The place for posing with your ride is hard to miss in Havana. The squares around Capitolio, a flattering copy of Washington’s Capitol building, are lined with 50-year-old American cars during daylight hours.
+            section(class = "main-content__photos photos")
+                h2(class = "photos__heading") Cuba in Photos
+                p(class = "photos__content") When you think of Carribean, you’re probably not thinking of Cuba. It’s the lone acacia silhouetted against a horizon stretching into eternity. It’s the snow-capped mountain almost on the equator and within sight of harsh deserts. It’s the lush, palm-fringed coastline of the Indian Ocean, it’s the Great Rift Valley that once threatened to tear the continent asunder, and it’s the dense forests reminiscent of the continent’s heart. In short, Kenya is a country of epic landforms that stir our deepest longings for this very special continent.
+            section(class = "main-content__slider slider")
+                ul(class = "slider__list")
+                    li(class = "slider__item")
+        footer(class = "page-footer")
+            img(class = "page-footer__logo")
+            nav(class = "page-footer__navigation navigation-footer")
+                ul(class = "navigation-footer__list")
+                    li(class = "navigation-footer__item")
+                        h3(class = "navigation-footer__heading") Company
+                        a(class = "navigation-footer__link", href = "#") About TripOp
+                        a(class = "navigation-footer__link", href = "#") Work with Us
+                    li(class = "navigation-footer__item")
+                        h3(class = "navigation-footer__heading") Discover
+                        a(class = "navigation-footer__link", href = "#") How to Book?
+                        a(class = "navigation-footer__link", href = "#") Methods of Payment
+                        a(class = "navigation-footer__link", href = "#") General Conditions
+                    li(class = "navigation-footer__item")
+                        h3(class = "navigation-footer__heading") Connect with us
+                        a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Contact Us
+                        a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Facebook
+                        a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Instagram
+                    li(class = "navigation-footer__item")
+                        h3(class = "navigation-footer__heading") Blog
+                        a(class = "navigation-footer__link", href = "#") Choosing A Static Caravan
+                        a(class = "navigation-footer__link", href = "#") Cost Cutting Ideas For Your Wedding
+            p(class = "page-footer__copyright") © 2016 All rights reserved.
+
+
