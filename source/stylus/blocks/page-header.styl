@@ -1,0 +1,62 @@
+.page-header
+  width 100%
+
+.page-header__wrapper
+  width 100%
+  max-width 1440px
+  height 100vh
+  max-height 700px
+  padding 40px
+  margin 0 auto
+  background-repeat no-repeat
+  background-position 50% 0
+  background-size cover
+  box-sizing border-box
+  position relative
+  overflow hidden
+  transition all 0.4s ease-out
+
+  &--cuba
+    background-image url("../img/bg-cuba.png")
+
+  &--burgundy
+    background-image url("../img/bg-burgundy.png")
+
+  &--antarctica
+    background-image url("../img/bg-antarctica.png")
+
+.page-header__wrapper--cuba
+  & .slider-header__item--cuba
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+  & .legend__item--cuba
+    display flex
+    justify-content center
+    opacity 1
+
+.page-header__wrapper--burgundy
+  & .slider-header__item--burgundy
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+  & .legend__item--burgundy
+    display flex
+    justify-content center
+    opacity 1
+
+.page-header__wrapper--antarctica
+  & .slider-header__item--antarctica
+    display flex
+    flex-direction column
+    justify-content center
+    align-items center
+
+  & .legend__item--antarctica
+    display flex
+    justify-content center
+    opacity 1

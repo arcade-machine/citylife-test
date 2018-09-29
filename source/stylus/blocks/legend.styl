@@ -1,0 +1,58 @@
+.legend
+  width 100%
+  padding 0
+  margin 0
+  position relative
+  bottom 15px
+  overflow hidden
+
+.legend__item
+  display none
+  opacity 0
+  transition all 0.4s ease-out
+
+.legend__paragraph
+  width auto
+  padding 0 40px
+  margin 0
+  font-family "Georgia Regular", Arial, sans-serif
+  font-size 24px
+  color #ffffff
+  position relative
+  transition all 0.4s ease-out
+
+  &::before
+    content ""
+    width 50vw
+    height 2px
+    position absolute
+    top 50%
+    left -50vw
+    background-color black
+
+  &::after
+    content ""
+    width 50vw
+    height 2px
+    position absolute
+    top 50%
+    right -50vw
+    background-color black
+
+  &--cuba::before
+    background-color #ECB84C
+
+  &--cuba::after
+    background-color #ECB84C
+
+  &--burgundy::before
+    background-color #8C001A
+
+  &--burgundy::after
+    background-color #8C001A
+
+  &--antarctica::before
+    background-color #ffffff
+
+  &--antarctica::after
+    background-color #ffffff

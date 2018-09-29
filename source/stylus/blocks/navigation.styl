@@ -1,0 +1,38 @@
+.navigation
+  border-bottom 1px solid rgba(208, 212, 216, 0.5)
+
+.navigation__list
+  width 100%
+  max-width 1170px
+  padding 0
+  margin 0 auto
+  display flex
+  justify-content center
+  list-style none
+
+.navigation__item
+  padding-top 24px
+  padding-bottom 20px
+  margin-right 34px
+  box-sizing border-box
+  border-bottom 4px solid transparent
+
+  &--current
+    border-color #ECB84C
+
+  &:last-child
+    margin-right 0
+
+.navigation__link
+  padding 0
+  margin 0
+  font-family "Helvetica Regular", Arial, sans-serif
+  font-size 14px
+  text-decoration none
+  color #909090
+
+  &:visited
+    color #909090
+
+  &--current
+    color #4E5665

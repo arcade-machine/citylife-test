@@ -1,0 +1,28 @@
+<svg width="1182" height="36" viewBox="0 0 1182 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g opacity="0.5" filter="url(#filter0_f)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M591 21C914.087 21 1176 19.433 1176 17.5C1176 15.567 914.087 14 591 14C267.913 14 6 15.567 6 17.5C6 19.433 267.913 21 591 21Z" fill="#212020"/>
+</g>
+<g opacity="0.3" filter="url(#filter1_f)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M870 22C912.526 22 947 20.2091 947 18C947 15.7909 912.526 14 870 14C827.474 14 793 15.7909 793 18C793 20.2091 827.474 22 870 22Z" fill="black"/>
+</g>
+<g opacity="0.3" filter="url(#filter2_f)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M194 22C236.526 22 271 20.2091 271 18C271 15.7909 236.526 14 194 14C151.474 14 117 15.7909 117 18C117 20.2091 151.474 22 194 22Z" fill="black"/>
+</g>
+<defs>
+<filter id="filter0_f" x="0.563437" y="8.56344" width="1180.87" height="17.8731" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="2.71828" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter1_f" x="779.409" y="0.408591" width="181.183" height="35.1828" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="6.7957" result="effect1_foregroundBlur"/>
+</filter>
+<filter id="filter2_f" x="103.409" y="0.408591" width="181.183" height="35.1828" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape"/>
+<feGaussianBlur stdDeviation="6.7957" result="effect1_foregroundBlur"/>
+</filter>
+</defs>
+</svg>
