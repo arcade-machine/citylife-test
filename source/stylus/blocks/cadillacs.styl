@@ -11,10 +11,25 @@
   color #4E5665
   text-align center
 
+.cadillacs__image
+  width 100%
+  position relative
+  margin-bottom 50px
+
+  &::after
+    content ""
+    width 100%
+    height 7px
+    opacity 0.2
+    border-radius 50%
+    background-color #212020
+    position absolute
+    bottom 0
+    left 0
+
 .cadillacs__photo
   max-width 100%
   height auto
-  margin-bottom 50px
 
 .cadillacs__content
   width 100%
