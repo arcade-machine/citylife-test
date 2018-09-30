@@ -1,6 +1,9 @@
 .about
+  max-width 1170px
   padding 0 100px
   padding-top 80px
+  margin 0 auto
+  box-sizing border-box
 
 .about__heading
   margin-bottom 44px
@@ -21,10 +24,16 @@
 .about__beaches
   min-height 430px
   padding 90px 0
-  background-image url("../img/beach.png")
+  background-image url("../img/webp/beach.webp")
   background-position 0 50%
   background-repeat no-repeat
   background-size 570px 427px
   box-sizing border-box
   display flex
   justify-content flex-end
+
+.no-webp .about__beaches
+  background-image url("../img/min/beach.png")
+
+.no-js .about__beaches
+  background-image url("../img/min/beach.png")

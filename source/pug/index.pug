@@ -1,18 +1,27 @@
 doctype html
 
-html(lang = "en")
+html(lang = "en", class = "no-js")
     head
         meta(charset = "utf-8")
         meta(name = "viewport", content = "width=device-width,initial-scale=1")
-        meta(name = "description", content = "Тестовое задание, CITYLIFE")
+        meta(name = "description", content = "Test task, CITYLIFE")
 
-        title Тестовое задание, CITYLIFE
+        title Test task, CITYLIFE
 
         link(type = "text/css", rel = "stylesheet", href = "css/normalize.css")
         link(type = "text/css", rel = "stylesheet", href = "css/styles.min.css")
-        link(rel = "preload", as = "image", href = "img/bg-cuba.png")
-        link(rel = "preload", as = "image", href = "img/bg-burgundy.png")
-        link(rel = "preload", as = "image", href = "img/bg-antarctica.png")
+
+        link(rel="preload" href="fonts/georgia-regular.woff2" as="font")
+        link(rel="preload" href="fonts/helvetica-regular.woff2" as="font")
+        link(rel="preload" href="fonts/times-bold.woff2" as="font")
+        link(rel="preload" href="fonts/avenir-next.woff2" as="font")
+        link(rel = "preload", as = "image", href = "img/webp/bg-cuba.webp")
+        link(rel = "preload", as = "image", href = "img/webp/bg-burgundy.webp")
+        link(rel = "preload", as = "image", href = "img/webp/bg-antarctica.webp")
+
+        script(src="js/webpsupport.js")
+        script(src="js/svg4everybody.min.js")
+        script svg4everybody();
 
     body
         header(class = "page-header page-header--cuba")
@@ -32,9 +41,9 @@ html(lang = "en")
                     li(class = "legend__item legend__item--antarctica")
                         p(class = "legend__paragraph legend__paragraph--antarctica") Snow, ice, water, rock. Simply stunning.
                 div(class = "main-header__dots slider-dots")
-                    button(class = "slider-dots__dot slider-dots__dot--current", onclick = "dotsClick(1)")
-                    button(class = "slider-dots__dot", onclick = "dotsClick(2)")
-                    button(class = "slider-dots__dot", onclick = "dotsClick(3)")
+                    button(class = "slider-dots__dot slider-dots__dot--current", onclick = "dotsClick(1)", aria-label = "Go to Cuba slide")
+                    button(class = "slider-dots__dot", onclick = "dotsClick(2)", aria-label = "Go to Burgundy slide")
+                    button(class = "slider-dots__dot", onclick = "dotsClick(3)", aria-label = "Go to Antarctica slide")
         nav(class = "page-header__navigation navigation")
                 ul(class = "navigation__list")
                     li(class = "navigation__item navigation__item--current")
@@ -57,19 +66,23 @@ html(lang = "en")
                 p(class = "description__info") It always had the allure a forbidden fruit. I love it for its uniqueness, creativity and survivalist spirit. I love it because, despite 60 years of setbacks, it remains an upbeat and open place. Walk down the street with a Cuban friend and, within one block, you’ll have received five handshakes, four kisses, three greetings of ‘dime hermano!’ and at least two invites into someone’s house. #[a(class = "description__more", href = "#") Read More]
                 ul(class = "description__statistic statistic")
                     li(class = "statistic__item")
-                        img(class = "statistic__icon", src = "img/icons/icon-route.svg")
+                        svg(class = "statistic__icon", width = "80", height = "80")
+                            use(xlink:href="img/icons/sprite.svg#icon-route")
                         p(class = "statistic__stat") 1,920
                         p(class = "statistic__about") Trips
                     li(class = "statistic__item")
-                        img(class = "statistic__icon", src = "img/icons/icon-restaurant.svg")
+                        svg(class = "statistic__icon", width = "80", height = "80")
+                            use(xlink:href="img/icons/sprite.svg#icon-restaurant")
                         p(class = "statistic__stat") 271
                         p(class = "statistic__about") Venues
                     li(class = "statistic__item")
-                        img(class = "statistic__icon", src = "img/icons/icon-transport.svg")
+                        svg(class = "statistic__icon", width = "80", height = "80")
+                            use(xlink:href="img/icons/sprite.svg#icon-transport")
                         p(class = "statistic__stat") 3,321
                         p(class = "statistic__about") Tickets Sold
                     li(class = "statistic__item")
-                        img(class = "statistic__icon", src = "img/icons/icon-interface.svg")
+                        svg(class = "statistic__icon", width = "80", height = "80")
+                            use(xlink:href="img/icons/sprite.svg#icon-interface")
                         p(class = "statistic__stat") 2,912
                         p(class = "statistic__about") Reviews
             section(class = "main-content__about about")
@@ -82,7 +95,9 @@ html(lang = "en")
             section(class = "main-content__cadillacs cadillacs")
                 h2(class = "cadillacs__heading") The Cadillacs of Cuba
                 div(class = "cadillacs__image")
-                    img(class = "cadillacs__photo", src = "img/cadillac.png")
+                    picture
+                        source(type = "image/webp", srcset = "img/webp/cadillac.webp")
+                        img(class = "cadillacs__photo", src = "img/min/cadillac.png", alt = "Cadillac Photo")
                 p(class = "cadillacs__content") The American trade embargo with Cuba in 1960 had the effect of instantly separating thousands of 1940s and 1950s Detroit-built cars from their spare parts supply. Convertibles were always popular, thanks to year-round tropical weather. The place for posing with your ride is hard to miss in Havana. The squares around Capitolio, a flattering copy of Washington’s Capitol building, are lined with 50-year-old American cars during daylight hours.
             section(class = "main-content__photos photos")
                 div(class = "photos__wrapper")
@@ -90,21 +105,32 @@ html(lang = "en")
                     p(class = "photos__content") When you think of Carribean, you’re probably not thinking of Cuba. It’s the lone acacia silhouetted against a horizon stretching into eternity. It’s the snow-capped mountain almost on the equator and within sight of harsh deserts. It’s the lush, palm-fringed coastline of the Indian Ocean, it’s the Great Rift Valley that once threatened to tear the continent asunder, and it’s the dense forests reminiscent of the continent’s heart. In short, Kenya is a country of epic landforms that stir our deepest longings for this very special continent.
         section(class = "main-content__slider slider")
             div(class = "slider__item")
-                img(class = "slider__image", src = "img/slider1.png")
+                picture
+                    source(type = "image/webp", srcset = "img/webp/slider1.webp")
+                    img(class = "slider__image", src = "img/min/slider1.png", alt = "First photo of Cuba")
             div(class = "slider__item")
-                img(class = "slider__image", src = "img/slider2.png")
+                picture
+                    source(type = "image/webp", srcset = "img/webp/slider2.webp")
+                    img(class = "slider__image", src = "img/min/slider2.png", alt = "Second photo of Cuba")
             div(class = "slider__item")
-                img(class = "slider__image", src = "img/slider3.png")
+                picture
+                    source(type = "image/webp", srcset = "img/webp/slider3.webp")
+                    img(class = "slider__image", src = "img/min/slider3.png", alt = "Third photo of Cuba")
             div(class = "slider__item")
-                img(class = "slider__image", src = "img/slider4.png")
+                picture
+                    source(type = "image/webp", srcset = "img/webp/slider4.webp")
+                    img(class = "slider__image", src = "img/min/slider4.png", alt = "Fourth photo of Cuba")
             div(class = "slider__item")
-                img(class = "slider__image", src = "img/slider5.png")
+                picture
+                    source(type = "image/webp", srcset = "img/webp/slider5.webp")
+                    img(class = "slider__image", src = "img/min/slider5.png", alt = "Fifth photo of Cuba")
             div(class = "slider__controls")
-                button(class = "slider__arrow slider__arrow--left")
-                button(class = "slider__arrow slider__arrow--right")
+                button(class = "slider__arrow slider__arrow--left", aria-label = "Move photos of Cuba to the left")
+                button(class = "slider__arrow slider__arrow--right", aria-label = "Move photos of Cuba to the right")
         footer(class = "page-footer")
             div(class = "page-footer__wrapper")
-                img(class = "page-footer__logo", src = "img/icons/icon-logo-footer.svg")
+                svg(class = "page-footer__logo", width = "149", height = "47")
+                    use(xlink:href="img/icons/sprite.svg#icon-logo-footer")
                 nav(class = "page-footer__navigation navigation-footer")
                     ul(class = "navigation-footer__list")
                         li(class = "navigation-footer__item")
@@ -118,9 +144,18 @@ html(lang = "en")
                             a(class = "navigation-footer__link", href = "#") General Conditions
                         li(class = "navigation-footer__item")
                             h3(class = "navigation-footer__heading") Connect with us
-                            a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Contact Us
-                            a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Facebook
-                            a(class = "navigation-footer__link navigation-footer__link--contact", href = "#") Instagram
+                            a(class = "navigation-footer__link", href = "#")
+                                svg(class = "navigation-footer__icon", width = "16", height = "16")
+                                    use(xlink:href="img/icons/sprite.svg#icon-interface-footer")
+                                p Contact Us
+                            a(class = "navigation-footer__link", href = "#")
+                                svg(class = "navigation-footer__icon", width = "16", height = "16")
+                                    use(xlink:href="img/icons/sprite.svg#icon-facebook")
+                                p Facebook
+                            a(class = "navigation-footer__link", href = "#")
+                                svg(class = "navigation-footer__icon", width = "16", height = "16")
+                                    use(xlink:href="img/icons/sprite.svg#icon-instagram")
+                                p Instagram
                         li(class = "navigation-footer__item")
                             h3(class = "navigation-footer__heading") Blog
                             a(class = "navigation-footer__link", href = "#") Choosing A Static Caravan

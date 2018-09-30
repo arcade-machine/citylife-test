@@ -11,6 +11,10 @@ var minify = require("gulp-uglify");
 var gulpIf = require("gulp-if");
 var minicss = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var webp = require("gulp-webp");
+var run = require("run-sequence");
+var del = require("del");
 
 gulp.task("stylus", function () {
     return gulp.src("source/stylus/styles.styl")
@@ -44,11 +48,47 @@ gulp.task("sprite", function() {
     .pipe(gulp.dest("source/img/icons"));
 });
 
+gulp.task("images", function() {
+    return gulp.src("source/img/**/*.{png,jpg}")
+        .pipe(imagemin([
+            imagemin.optipng({optimizationLevel: 3}),
+            imagemin.jpegtran({progressive: true}),
+        ]))
+        .pipe(gulp.dest("source/img/min"));
+});
+
+gulp.task("webp", function() {
+    return gulp.src("source/img/**/*.{png,jpg}")
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest("source/img/webp"));
+});
+
 gulp.task("watch", ["browserSync", "stylus", "pug"], function () {
     gulp.watch("source/stylus/**/*.styl", ["stylus"]);
     gulp.watch("source/pug/*.pug", ["pug"]);
     gulp.watch("source/*.html", browserSync.reload);
     gulp.watch("source/js/*.js", browserSync.reload);
+});
+
+gulp.task("gitpage", function(done) {
+    run ("clean", "copy", done);
+});
+
+gulp.task("copy", function() {
+    return gulp.src([
+        "source/fonts/**/*.{woff,woff2}",
+        "source/img/**",
+        "source/js/**",
+        "source/css/**",
+        "source/*.html"
+    ], {
+        base: "source"
+    })
+        .pipe(gulp.dest("docs"));
+});
+
+gulp.task("clean", function() {
+    return del("docs");
 });
 
 gulp.task("browserSync", function () {

@@ -9,13 +9,13 @@
   transition all 0.4s ease-out
 
   &--cuba
-    background-image url("../img/bg-cuba.png")
+    background-image url("../img/webp/bg-cuba.webp")
 
   &--burgundy
-    background-image url("../img/bg-burgundy.png")
+    background-image url("../img/webp/bg-burgundy.webp")
 
   &--antarctica
-    background-image url("../img/bg-antarctica.png")
+    background-image url("../img/webp/bg-antarctica.webp")
 
 .page-header__wrapper
   width 100%
@@ -52,3 +52,23 @@
   & .legend__item--antarctica
     opacity 1
     z-index 2
+
+.no-webp
+  & .page-header--cuba
+    background-image url("../img/min/bg-cuba.png")
+
+  & .page-header--burgundy
+    background-image url("../img/min/bg-burgundy.png")
+
+  & .page-header--antarctica
+    background-image url("../img/min/bg-antarctica.png")
+
+.no-js
+  & .page-header--cuba
+    background-image url("../img/min/bg-cuba.png")
+
+  & .page-header--burgundy
+    background-image url("../img/min/bg-burgundy.png")
+
+  & .page-header--antarctica
+    background-image url("../img/min/bg-antarctica.png")
