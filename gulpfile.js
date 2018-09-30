@@ -14,7 +14,6 @@ var rename = require("gulp-rename");
 var imagemin = require("gulp-imagemin");
 var webp = require("gulp-webp");
 var run = require("run-sequence");
-var del = require("del");
 
 gulp.task("stylus", function () {
     return gulp.src("source/stylus/styles.styl")

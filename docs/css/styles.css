@@ -26,6 +26,12 @@
   src: url("../fonts/avenir-next.woff") format("woff"), url("../fonts/avenir-next.woff2") format("woff2");
   font-display: swap;
 }
+.visually-hidden {
+  display: none;
+}
+body {
+  min-width: 800px;
+}
 .page-header {
   width: 100%;
   background-repeat: no-repeat;
@@ -143,6 +149,16 @@
   color: #fff;
   position: relative;
 }
+@media (max-width: 1100px) {
+  .slider-header__header {
+    font-size: 180px;
+  }
+}
+@media (max-width: 950px) {
+  .slider-header__header {
+    font-size: 150px;
+  }
+}
 .navigation {
   border-bottom: 1px solid rgba(208,212,216,0.5);
 }
@@ -251,7 +267,6 @@
 .description__more::after {
   content: "››";
   position: absolute;
-  right: -10px;
 }
 .description__more:visited {
   color: #ecb84c;
@@ -259,6 +274,12 @@
 .description__more:hover {
   font-weight: 700;
   text-decoration: underline;
+}
+@media (max-width: 1100px) {
+  .description {
+    max-width: 800px;
+    padding: 0 50px;
+  }
 }
 .statistic {
   padding: 0;
@@ -302,6 +323,14 @@
   color: #909090;
   text-align: center;
 }
+@media (max-width: 1100px) {
+  .statistic {
+    justify-content: space-between;
+  }
+  .statistic__item {
+    margin-right: 0;
+  }
+}
 .about {
   max-width: 1170px;
   padding: 0 100px;
@@ -341,6 +370,12 @@
 }
 .no-js .about__beaches {
   background-image: url("../img/min/beach.png");
+}
+@media (max-width: 1100px) {
+  .about {
+    max-width: 800px;
+    padding: 0 50px;
+  }
 }
 .card {
   width: 50%;
@@ -433,6 +468,12 @@
   line-height: 28px;
   color: #505050;
 }
+@media (max-width: 1100px) {
+  .cadillacs {
+    max-width: 800px;
+    padding: 0 50px;
+  }
+}
 .photos {
   padding-top: 80px;
 }
@@ -468,6 +509,14 @@
   font-size: 16px;
   line-height: 28px;
   color: #505050;
+}
+@media (max-width: 1100px) {
+  .photos {
+    max-width: 800px;
+    padding: 0 50px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
 }
 .slider {
   width: 100%;
@@ -544,6 +593,18 @@
   color: #505050;
   text-align: center;
 }
+@media (max-width: 1100px) {
+  .page-footer__wrapper {
+    max-width: 800px;
+    padding-top: 25px;
+    padding-bottom: 15px;
+  }
+  .page-footer__logo {
+    margin: 0 auto;
+    margin-bottom: 20px;
+    display: block;
+  }
+}
 .navigation-footer {
   margin-bottom: 90px;
   flex-grow: 1;
@@ -603,6 +664,31 @@
 .navigation-footer__link p {
   padding: 0;
   margin: 0;
+}
+@media (max-width: 1100px) {
+  .navigation-footer {
+    width: 100%;
+    margin-bottom: 0;
+  }
+  .navigation-footer__list {
+    width: 100%;
+    flex-wrap: wrap;
+  }
+  .navigation-footer__item {
+    margin-bottom: 20px;
+  }
+  .navigation-footer__item:nth-child(1) {
+    width: 40%;
+  }
+  .navigation-footer__item:nth-child(2) {
+    width: 40%;
+  }
+  .navigation-footer__item:nth-child(3) {
+    width: 40%;
+  }
+  .navigation-footer__item:nth-child(4) {
+    width: 40%;
+  }
 }
 .legend {
   width: 100%;
@@ -669,4 +755,21 @@
 }
 .legend__paragraph--antarctica::after {
   background-color: #fff;
+}
+@media (max-width: 1100px) {
+  .legend {
+    bottom: 13px;
+  }
+  .legend__paragraph {
+    font-size: 20px;
+  }
+}
+@media (max-width: 950px) {
+  .legend {
+    bottom: 10px;
+  }
+  .legend__paragraph {
+    padding: 0 20px;
+    font-size: 18px;
+  }
 }

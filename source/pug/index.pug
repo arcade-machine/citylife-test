@@ -24,6 +24,7 @@ html(lang = "en", class = "no-js")
         script svg4everybody();
 
     body
+        h1(class = "visually-hidden") Test task, CITYLIFE
         header(class = "page-header page-header--cuba")
             div(class = "page-header__wrapper")
                 ul(class = "page-header__slider slider-header")
@@ -33,18 +34,18 @@ html(lang = "en", class = "no-js")
                         h2(class = "slider-header__header") Burgundy
                     li(class = "slider-header__item slider-header__item--antarctica")
                         h2(class = "slider-header__header") Antarctica
-                ul(class = "main-header__legend legend")
+                ul(class = "page-header__legend legend")
                     li(class = "legend__item legend__item--cuba")
                         p(class = "legend__paragraph legend__paragraph--cuba") Explore the world of Casas & Cadillacs
                     li(class = "legend__item legend__item--burgundy")
                         p(class = "legend__paragraph legend__paragraph--burgundy") Explore the luxury of Wine & Food
                     li(class = "legend__item legend__item--antarctica")
                         p(class = "legend__paragraph legend__paragraph--antarctica") Snow, ice, water, rock. Simply stunning.
-                div(class = "main-header__dots slider-dots")
+                div(class = "page-header__dots slider-dots")
                     button(class = "slider-dots__dot slider-dots__dot--current", onclick = "dotsClick(1)", aria-label = "Go to Cuba slide")
                     button(class = "slider-dots__dot", onclick = "dotsClick(2)", aria-label = "Go to Burgundy slide")
                     button(class = "slider-dots__dot", onclick = "dotsClick(3)", aria-label = "Go to Antarctica slide")
-        nav(class = "page-header__navigation navigation")
+        nav(class = "navigation")
                 ul(class = "navigation__list")
                     li(class = "navigation__item navigation__item--current")
                         p(class = "navigation__link navigation__link--current") Summary
@@ -103,7 +104,7 @@ html(lang = "en", class = "no-js")
                 div(class = "photos__wrapper")
                     h2(class = "photos__heading") Cuba in Photos
                     p(class = "photos__content") When you think of Carribean, you’re probably not thinking of Cuba. It’s the lone acacia silhouetted against a horizon stretching into eternity. It’s the snow-capped mountain almost on the equator and within sight of harsh deserts. It’s the lush, palm-fringed coastline of the Indian Ocean, it’s the Great Rift Valley that once threatened to tear the continent asunder, and it’s the dense forests reminiscent of the continent’s heart. In short, Kenya is a country of epic landforms that stir our deepest longings for this very special continent.
-        section(class = "main-content__slider slider")
+        section(class = "slider")
             div(class = "slider__item")
                 picture
                     source(type = "image/webp", srcset = "img/webp/slider1.webp")
